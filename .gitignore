@@ -1,0 +1,6 @@
+data/input/
+data/output/
+data/oracle/
+.pytest_cache/
+__pycache__/
+*.pyc

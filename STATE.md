@@ -6,8 +6,8 @@ Project 2 of Gokul's DE portfolio (see wiki-stream-pipeline for project 1; site:
 
 ## Status
 - ✅ Architecture + ADRs 1-3: deterministic multi-pass matching, DuckDB-SQL core (same SQL reused by the site's browser demo via DuckDB-WASM), generator-emits-oracle testing model. **Binding.**
-- ⬜ NEXT (Codex): implementation per docs/ — generator, sql/ passes, thin Python CLI (`recon generate|run|verify`), pytest suite incl. multi-seed recall/precision assertions, Makefile (`make demo` = generate→run→verify at 1M rows), README with measured numbers.
-- ⬜ Then: 1M/10M benchmark numbers into README cost section; project page + in-browser demo on the site (reuses sql/ files with DuckDB-WASM); final polish.
+- ✅ Engine implemented (pending routine live verify on the target benchmark environment): seeded generator + isolated oracle, DuckDB-SQL multi-pass reconciler, thin `recon generate|run|verify` CLI, pytest correctness suite, Makefile, and diagram-first README.
+- ⬜ Next: measured 1M/10M benchmark numbers into README; project page + in-browser site demo (reuses `sql/` files); final polish.
 
 ## Layout contract
 - `data/input/` (ledger views only) vs `data/oracle/` (defect manifest — reconciler must never read).
