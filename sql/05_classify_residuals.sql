@@ -49,13 +49,17 @@ SELECT
         ELSE 'MEDIUM'
     END AS severity,
     CASE
-        WHEN (current_date - settlement_date) <= 1 THEN '0-1d'
-        WHEN (current_date - settlement_date) <= 7 THEN '2-7d'
+        WHEN age_days <= 1 THEN '0-1d'
+        WHEN age_days <= 7 THEN '2-7d'
         ELSE '8d+'
     END AS aging_bucket,
     settlement_date,
     detail
-FROM exceptions_raw;
+FROM (
+    -- age computed outside the CASE: date arithmetic inside CASE branches
+    -- crashes duckdb-wasm 1.5.4 (memory OOB), and the site runs this file
+    SELECT *, (current_date - settlement_date) AS age_days FROM exceptions_raw
+);
 
 CREATE OR REPLACE TABLE matches_final AS
 SELECT * FROM exact_matches
