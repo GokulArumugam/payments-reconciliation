@@ -1,7 +1,7 @@
 # Payments reconciliation engine
 
 
-**Live write-up & in-browser demo (runs this repo's actual SQL via DuckDB-WASM):** [portfolio-site-eosin-eta.vercel.app/projects/payments-reconciliation-engine](https://portfolio-site-eosin-eta.vercel.app/projects/payments-reconciliation-engine)
+**Live write-up & in-browser demo (runs this repo's actual SQL via DuckDB-WASM):** [gokularumugam-portfolio-site.vercel.app/projects/payments-reconciliation-engine](https://gokularumugam-portfolio-site.vercel.app/projects/payments-reconciliation-engine)
 ```mermaid
 flowchart LR
     GT[Seeded ground truth] --> SL[switch_ledger.parquet]

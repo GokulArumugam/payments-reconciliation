@@ -2,7 +2,7 @@
 
 **Last updated:** 2026-07-11 — architecture phase (Claude)
 
-Project 2 of Gokul's DE portfolio (see wiki-stream-pipeline for project 1; site: portfolio-site → portfolio-site-eosin-eta.vercel.app). Workflow: orchestrator designs/reviews; Codex implements (`--model gpt-5.6-terra --effort high`); everything verified live before acceptance.
+Project 2 of Gokul's DE portfolio (see wiki-stream-pipeline for project 1; site: portfolio-site → gokularumugam-portfolio-site.vercel.app). Workflow: orchestrator designs/reviews; Codex implements (`--model gpt-5.6-terra --effort high`); everything verified live before acceptance.
 
 ## Status
 - ✅ Architecture + ADRs 1-3: deterministic multi-pass matching, DuckDB-SQL core (same SQL reused by the site's browser demo via DuckDB-WASM), generator-emits-oracle testing model. **Binding.**
